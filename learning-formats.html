@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Формы обучения · Международные школы Санкт-Петербурга</title>
+  <meta name="description" content="Очное, очно-заочное, заочное и семейное обучение, экстернат и продлённый день — выберите формат, который подходит вашей семье.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <span id="mark" class="logo__mark"></span>
+        <span class="logo__text">Interschool</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <div class="nav__item nav__item--has-sub">
+          <a href="index.html#about" class="nav__link">О нас</a>
+          <div class="nav__dropdown">
+            <a href="education-model.html" class="nav__dropdown-link">Образовательная модель</a>
+            <a href="index.html#about" class="nav__dropdown-link">МШГУ</a>
+            <a href="index.html#about" class="nav__dropdown-link">СПбМШ</a>
+            <a href="index.html#about" class="nav__dropdown-link">Администрация</a>
+          </div>
+        </div>
+        <a href="teachers.html" class="nav__link">Наши учителя</a>
+        <a href="index.html#advantages" class="nav__link">Почему мы</a>
+        <div class="nav__item nav__item--has-sub">
+          <a href="index.html#admission" class="nav__link">Поступление</a>
+          <div class="nav__dropdown">
+            <a href="learning-formats.html" class="nav__dropdown-link">Формы обучения</a>
+            <a href="index.html#admission" class="nav__dropdown-link">Как поступить</a>
+            <a href="index.html#admission" class="nav__dropdown-link">Документы</a>
+          </div>
+        </div>
+        <a href="index.html#life" class="nav__link">Жизнь школы</a>
+        <a href="index.html#contacts" class="nav__link">Контакты</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="index.html#admission" class="btn btn--primary btn--sm">Записаться</a>
+        <button class="burger" id="burger" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="page-hero page-hero--image">
+    <div class="container">
+      <p class="section__eyebrow">Поступление</p>
+      <h1 class="page-hero__title">Формы обучения</h1>
+      <p class="page-hero__desc">
+        Задача школы — дать академическое образование по программе ФГОС
+        любому ребёнку. Поэтому семья может выбрать формат, который подходит
+        именно ей.
+      </p>
+    </div>
+  </section>
+
+  <!-- Formats comparison -->
+  <section class="section lf-formats">
+    <div class="container">
+      <div class="section__header section__header--center">
+        <p class="section__eyebrow">Основные форматы</p>
+        <h2 class="section__title">Выберите подходящий вариант</h2>
+      </div>
+
+      <div class="lf-grid">
+        <!-- Очное -->
+        <article class="lf-card">
+          <div class="lf-card__head">
+            <h3 class="lf-card__title">Очное</h3>
+            <p class="lf-card__tagline">Полный день в школе</p>
+          </div>
+          <ul class="lf-card__list">
+            <li>Обучение по российским госпрограммам</li>
+            <li>Уровневое изучение иностранных языков</li>
+            <li>Обучение в малых классах</li>
+            <li>Индивидуальные образовательные маршруты</li>
+            <li>Аттестат государственного образца</li>
+            <li>Полный день с 9:00 до 17:00</li>
+            <li>Праздники, конкурсы, спорт, выезды, экскурсии</li>
+          </ul>
+          <a href="index.html#admission" class="btn btn--ghost lf-card__btn">Записаться</a>
+        </article>
+
+        <!-- Очно-заочное -->
+        <article class="lf-card">
+          <div class="lf-card__head">
+            <h3 class="lf-card__title">Очно-заочное</h3>
+            <p class="lf-card__tagline">Гибкий график + школа</p>
+          </div>
+          <ul class="lf-card__list">
+            <li>Аттестат государственного образца</li>
+            <li>Платформа с материалами по ФГОС</li>
+            <li>Отчёт об успеваемости каждые 2 недели</li>
+            <li>Очный итоговый контроль каждую четверть</li>
+            <li>Участие в ВПР, сочинении, ОГЭ и ЕГЭ</li>
+            <li>15 индивидуальных консультаций в полугодие</li>
+            <li>Индивидуальный образовательный маршрут</li>
+            <li>Поддержка координатора программы</li>
+            <li>Помощь с графиком обучения и режимом дня</li>
+            <li>Участие во внешкольной жизни</li>
+          </ul>
+          <a href="index.html#admission" class="btn btn--ghost lf-card__btn">Записаться</a>
+        </article>
+
+        <!-- Заочное -->
+        <article class="lf-card">
+          <div class="lf-card__head">
+            <h3 class="lf-card__title">Заочное</h3>
+            <p class="lf-card__tagline">Самостоятельно, с поддержкой</p>
+          </div>
+          <ul class="lf-card__list">
+            <li>Аттестат государственного образца</li>
+            <li>Платформа с материалами по ФГОС</li>
+            <li>Отчёт об успеваемости каждые 2 недели</li>
+            <li>Очный итоговый контроль каждую четверть</li>
+            <li>Участие в ВПР, сочинении, ОГЭ и ЕГЭ</li>
+            <li>15 индивидуальных консультаций в полугодие</li>
+            <li>Индивидуальный образовательный маршрут</li>
+            <li>Поддержка координатора программы</li>
+            <li>Помощь с графиком обучения и режимом дня</li>
+            <li>Участие во внешкольной жизни</li>
+          </ul>
+          <a href="index.html#admission" class="btn btn--ghost lf-card__btn">Записаться</a>
+        </article>
+
+        <!-- Семейное -->
+        <article class="lf-card">
+          <div class="lf-card__head">
+            <h3 class="lf-card__title">Семейное</h3>
+            <p class="lf-card__tagline">Аттестация и сопровождение</p>
+          </div>
+          <ul class="lf-card__list">
+            <li>Оформление установочной документации</li>
+            <li>Программы и перечень учебных пособий</li>
+            <li>Инструктаж по форме аттестации</li>
+            <li>1 консультация по каждому предмету перед аттестацией</li>
+            <li>Промежуточная аттестация с предметными комиссиями</li>
+            <li>Итоговый табель-справка об аттестации</li>
+          </ul>
+          <a href="index.html#admission" class="btn btn--ghost lf-card__btn">Записаться</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Extended day -->
+  <section class="section lf-extra">
+    <div class="container">
+      <div class="lf-extra__grid">
+        <div class="lf-extra__content">
+          <p class="section__eyebrow">После уроков</p>
+          <h2 class="section__title">Продлённый день</h2>
+          <p class="lf-extra__text">
+            Кружки и секции — важная часть учебно-воспитательного процесса.
+            Мы стараемся дать каждому возможность найти себя в любимом деле.
+          </p>
+          <ul class="lf-extra__list">
+            <li>Возможность находиться в школе до 18:00</li>
+            <li>Регулярные концерты и мероприятия для детей и родителей</li>
+            <li>Все кружки и секции продлённого дня входят в стоимость обучения</li>
+          </ul>
+        </div>
+        <div class="lf-extra__aside">
+          <div class="lf-extra__stat">
+            <strong>до 18:00</strong>
+            <span>в школе после уроков</span>
+          </div>
+          <div class="lf-extra__stat">
+            <strong>включено</strong>
+            <span>кружки и секции в стоимость</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Externat -->
+  <section class="section lf-externat">
+    <div class="container">
+      <div class="section__header section__header--center">
+        <p class="section__eyebrow">Старшая школа</p>
+        <h2 class="section__title">Экстернат: 10 и 11 класс за 1 год</h2>
+        <p class="section__desc">
+          Ускоренное освоение программы среднего общего образования
+          с подготовкой к ЕГЭ.
+        </p>
+      </div>
+
+      <div class="lf-externat__modes">
+        <div class="lf-mode">
+          <h3 class="lf-mode__title">Очная форма</h3>
+          <p class="lf-mode__text">С посещением учебных занятий</p>
+        </div>
+        <div class="lf-mode">
+          <h3 class="lf-mode__title">Очно-заочная форма</h3>
+          <p class="lf-mode__text">Самостоятельное освоение под контролем координатора</p>
+        </div>
+      </div>
+
+      <div class="lf-externat__benefits">
+        <h3 class="lf-externat__subtitle">Экстернат позволяет</h3>
+        <ul class="lf-externat__list">
+          <li>Освоить материал по основным предметам (русский язык, литература, математика) — обязательным для ЕГЭ</li>
+          <li>Получить аттестацию по всем предметам учебного плана среднего общего образования</li>
+          <li>Получить базовую подготовку по английскому языку, достаточную для сдачи ЕГЭ</li>
+          <li>Расширить план дополнительными часами на ЕГЭ по выбору или второй иностранный язык</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section em-cta">
+    <div class="container">
+      <div class="em-cta__box">
+        <h2 class="em-cta__title">Не уверены, какой формат выбрать?</h2>
+        <p class="em-cta__text">
+          Приходите на экскурсию — расскажем о различиях, покажем, как устроен
+          учебный день, и поможем подобрать маршрут для вашей семьи.
+        </p>
+        <a href="index.html#admission" class="btn btn--primary">Записаться на экскурсию</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="logo logo--footer">
+          <span id="mark" class="logo__mark"></span>
+          <span class="logo__text">Interschool</span>
+        </a>
+        <p>Международные школы Санкт-Петербурга<br>с 1993 года</p>
+      </div>
+      <div class="footer__links">
+        <a href="index.html#about">О нас</a>
+        <a href="learning-formats.html">Формы обучения</a>
+        <a href="teachers.html">Наши учителя</a>
+        <a href="index.html#admission">Поступление</a>
+        <a href="index.html#contacts">Контакты</a>
+      </div>
+      <div class="footer__copy">
+        <p>© 2026 Interschool. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

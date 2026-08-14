@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
       burger.classList.toggle('active');
     });
 
-    // Close menu on link click
-    nav.querySelectorAll('.nav__link').forEach(link => {
+    // Close menu on link click (including dropdown)
+    nav.querySelectorAll('.nav__link, .nav__dropdown-link').forEach(link => {
       link.addEventListener('click', () => {
         nav.classList.remove('open');
         burger.classList.remove('active');
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
   );
 
-  document.querySelectorAll('.advantage, .step, .news-card, .school-card, .contact-card')
+  document.querySelectorAll('.adv-block, .step, .news-card, .school-card, .contact-card')
     .forEach((el) => {
       el.style.opacity = '0';
       el.style.transform = 'translateY(20px)';
@@ -86,4 +86,52 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   `;
   document.head.appendChild(style);
+
+  // Teachers pagination — 4 cards per page
+  const PER_PAGE = 4;
+
+  document.querySelectorAll('.teachers-section').forEach((section) => {
+    const cards = Array.from(section.querySelectorAll('.teacher-card'));
+    const pager = section.querySelector('.teachers-pager');
+    if (!pager || cards.length === 0) return;
+
+    const prevBtn = pager.querySelector('.teachers-pager__btn:first-child');
+    const nextBtn = pager.querySelector('.teachers-pager__btn:last-child');
+    const info = pager.querySelector('.teachers-pager__info');
+    const totalPages = Math.max(1, Math.ceil(cards.length / PER_PAGE));
+    let page = 0;
+
+    // Hide pager if only one page
+    if (totalPages <= 1) {
+      pager.style.display = 'none';
+      return;
+    }
+
+    const render = () => {
+      cards.forEach((card, i) => {
+        const start = page * PER_PAGE;
+        const end = start + PER_PAGE;
+        card.hidden = i < start || i >= end;
+      });
+      if (info) info.textContent = `${page + 1}/${totalPages}`;
+      if (prevBtn) prevBtn.disabled = page === 0;
+      if (nextBtn) nextBtn.disabled = page >= totalPages - 1;
+    };
+
+    prevBtn?.addEventListener('click', () => {
+      if (page > 0) {
+        page -= 1;
+        render();
+      }
+    });
+
+    nextBtn?.addEventListener('click', () => {
+      if (page < totalPages - 1) {
+        page += 1;
+        render();
+      }
+    });
+
+    render();
+  });
 });
