@@ -354,6 +354,14 @@ button, input, select {
   top: calc(var(--header-h) + 24px);
 }
 
+.director__photo img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+}
+
 .director__placeholder {
   aspect-ratio: 3 / 4;
   background: var(--color-bg);
@@ -1226,7 +1234,7 @@ button, input, select {
 .em-principle {
   display: flex;
   flex-direction: column;
-  height: 280px;
+  min-height: 280px;
   padding: 32px 28px;
   background: var(--color-bg);
   border-radius: var(--radius);
