@@ -87,6 +87,18 @@ document.addEventListener('DOMContentLoaded', () => {
   `;
   document.head.appendChild(style);
 
+
+  // Hero background slideshow
+  const heroSlides = document.querySelectorAll('.hero__slide');
+  if (heroSlides.length > 1) {
+    let heroIndex = 0;
+    setInterval(() => {
+      heroSlides[heroIndex].classList.remove('is-active');
+      heroIndex = (heroIndex + 1) % heroSlides.length;
+      heroSlides[heroIndex].classList.add('is-active');
+    }, 6000);
+  }
+
   // Teachers pagination — 4 cards per page
   const PER_PAGE = 4;
 

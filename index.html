@@ -40,7 +40,6 @@
           </div>
         </div>
         <a href="#life" class="nav__link">Жизнь школы</a>
-        <a href="#contacts" class="nav__link">Контакты</a>
       </nav>
 
       <div class="header__actions">
@@ -54,13 +53,15 @@
 
 <!-- Hero -->
   <section class="hero">
+    <div class="hero__slides" aria-hidden="true">
+      <div class="hero__slide is-active" style="background-image: url('banner-1.jpg')"></div>
+      <div class="hero__slide" style="background-image: url('banner-2.jpg')"></div>
+    </div>
     <div class="container hero__inner">
       <div class="hero__content">
         <p class="section__eyebrow">Санкт-Петербург · преподаём с 1993 года</p>
         <h1 class="hero__title">
-          Современное 
-          образование<br>
-          <span>в сердце города</span>
+          Современное образование <span>в сердце города</span>
         </h1>
       </div>
     </div>
@@ -120,47 +121,47 @@
     <div class="container">
       <div class="section__header">
         <p class="section__eyebrow">О школах</p>
-        <h2 class="section__title">Одна философия.<br>Три уникальные площадки.</h2>
+        <h2 class="section__title">Одна философия. Две школы.<br>Три уникальные площадки.</h2>
       </div>
 
-      <div class="schools">
-        <article class="school-card">
-          <div class="school-card__badge">1-5 класс</div>
-          <h3 class="school-card__title"> Начальная школа <br> имени А.И. Герцена
-		  </h3>
-          <p class="school-card__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum arcu in mi ornare, non elementum enim maximus.
-          </p>
-          <ul class="school-card__list">
-            <li>In hac habitasse platea dictumst</li>
-            <li>Aliquam lectus lectus</li>
-            <li>Convallis id laoreet</li>
-          </ul>
-        </article>
-		<article class="school-card">
-          <div class="school-card__badge">6-11 класс</div>
-          <h3 class="school-card__title">Школа имени <br> А.И. Герцена</h3>
-          <p class="school-card__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum arcu in mi ornare, non elementum enim maximus.
-          </p>
-          <ul class="school-card__list">
-            <li>In hac habitasse platea dictumst</li>
-            <li>Aliquam lectus lectus</li>
-            <li>Convallis id laoreet</li>
-          </ul>
-        </article>
-        <article class="school-card">
-          <div class="school-card__badge">1-11 класс</div>
-          <h3 class="school-card__title">Санкт-Петербургская <br> международная школа</h3>
-          <p class="school-card__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum arcu in mi ornare, non elementum enim maximus.
-          </p>
-          <ul class="school-card__list">
-            <li>In hac habitasse platea dictumst</li>
-            <li>Aliquam lectus lectus</li>
-            <li>Convallis id laoreet</li>
-          </ul>
-        </article>
+                  <div class="schools">
+        <div class="school-space">
+          <header class="school-space__header">
+            <p class="school-space__eyebrow">Школа 1</p>
+            <h3 class="school-space__name">Школа имени А.И.&nbsp;Герцена</h3>
+            <!--<p class="school-space__note">Одно образовательное пространство · две площадки</p>-->
+          </header>
+          <div class="school-space__sites">
+            <div class="school-site">
+              <span class="school-site__grade">1–5 класс</span>
+              <h4 class="school-site__title">Начальная школа</h4>
+              <p class="school-site__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum arcu in mi ornare.</p>
+              <p class="school-site__address">Б. Морская ул., 23</p>
+            </div>
+            <div class="school-site">
+              <span class="school-site__grade">6–11 класс</span>
+              <h4 class="school-site__title">Основная и старшая</h4>
+              <p class="school-site__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum arcu in mi ornare.</p>
+              <p class="school-site__address">ул. Восстания, 8Б</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="school-space">
+          <header class="school-space__header">
+            <p class="school-space__eyebrow">Школа 2</p>
+            <h3 class="school-space__name">Санкт-Петербургская международная школа</h3>
+            <!--<p class="school-space__note">Отдельное образовательное пространство</p>-->
+          </header>
+          <div class="school-space__sites school-space__sites--single">
+            <div class="school-site">
+              <span class="school-site__grade">1–11 класс</span>
+              <h4 class="school-site__title">Полный цикл обучения</h4>
+              <p class="school-site__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum arcu in mi ornare, non elementum enim maximus.</p>
+              <p class="school-site__address">ул. Чекистов, 13, лит. В</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -178,7 +179,7 @@
       <!-- 1 -->
       <div class="adv-block">
         <div class="adv-block__bg">
-          <div class="adv-block__placeholder">Фото</div>
+          <img src="advantages/1-heritage.jpg" alt="Книги и знания — традиции образования">
         </div>
         <div class="adv-block__card">
           <p class="adv-block__text">«Образовательная деятельность с 1993 года — более тридцати лет опыта, традиций и постоянного развития.»</p>
@@ -192,7 +193,7 @@
       <!-- 2 -->
       <div class="adv-block adv-block--flip">
         <div class="adv-block__bg">
-          <div class="adv-block__placeholder">Фото</div>
+          <img src="advantages/2-official.jpg" alt="Официальные документы и статус">
         </div>
         <div class="adv-block__card">
           <p class="adv-block__text">«Официальная лицензия и аккредитация — гарантия качества и соответствия государственным требованиям.»</p>
@@ -206,7 +207,7 @@
       <!-- 3 -->
       <div class="adv-block">
         <div class="adv-block__bg">
-          <div class="adv-block__placeholder">Фото</div>
+          <img src="advantages/3-flexible.jpg" alt="Гибкие формы обучения">
         </div>
         <div class="adv-block__card">
           <p class="adv-block__text">«Мы предлагаем все формы обучения: очную, заочную, очно-заочную и семейную — чтобы каждая семья могла выбрать свой путь.»</p>
@@ -220,7 +221,7 @@
       <!-- 4 -->
       <div class="adv-block adv-block--flip">
         <div class="adv-block__bg">
-          <div class="adv-block__placeholder">Фото</div>
+          <img src="advantages/4-life.jpg" alt="Живая школьная жизнь">
         </div>
         <div class="adv-block__card">
           <p class="adv-block__text">«Увлекательная и весёлая школьная жизнь: праздники, конкурсы, спорт, творчество и настоящая дружба.»</p>
@@ -325,33 +326,6 @@
     </div>
   </section>
 
-  <!-- Contacts -->
-  <section class="section contacts" id="contacts">
-    <div class="container">
-      <div class="section__header section__header--center">
-        <p class="section__eyebrow">Контакты</p>
-        <h2 class="section__title">Приходите в гости</h2>
-      </div>
-
-      <div class="contacts__grid">
-        <div class="contact-card">
-          <h3>ул. Восстания, 8Б</h3>
-          <p>Центр Санкт-Петербурга</p>
-          <div class="contact-card__qr">QR</div>
-        </div>
-        <div class="contact-card">
-          <h3>Б. Морская ул., 12/23</h3>
-          <p>Исторический центр</p>
-          <div class="contact-card__qr">QR</div>
-        </div>
-        <div class="contact-card">
-          <h3>ул. Чекистов, 13, лит. В</h3>
-          <p>Дворец-усадьба Ново-Знаменка</p>
-          <div class="contact-card__qr">QR</div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Footer -->
   <footer class="footer">
@@ -367,7 +341,6 @@
         <a href="#about">О нас</a>
         <a href="#advantages">Преимущества</a>
         <a href="#admission">Поступление</a>
-        <a href="#contacts">Контакты</a>
       </div>
       <div class="footer__copy">
         <p>© 2026 Interschool. Все права защищены.</p>
