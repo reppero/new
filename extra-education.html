@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дополнительное образование · Международные школы Санкт-Петербурга</title>
+  <meta name="description" content="Кружки и курсы дополнительного образования МШГУ: наука, культура, творчество, спорт. Программа для 6–7 классов.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <span id="mark" class="logo__mark"></span>
+        <span class="logo__text">Interschool</span>
+      </a>
+      <nav class="nav" id="nav">
+        <div class="nav__item nav__item--has-sub">
+          <a href="index.html#about" class="nav__link">О нас</a>
+          <div class="nav__dropdown">
+            <a href="index.html#about" class="nav__dropdown-link">МШГУ</a>
+            <a href="index.html#about" class="nav__dropdown-link">СПбМШ</a>
+          </div>
+        </div>
+        <div class="nav__item nav__item--has-sub">
+          <a href="education-model.html" class="nav__link">Учебный процесс</a>
+          <div class="nav__dropdown">
+            <a href="education-model.html" class="nav__dropdown-link">Образовательная модель</a>
+            <a href="learning-formats.html" class="nav__dropdown-link">Формы обучения</a>
+          </div>
+        </div>
+        <a href="extra-education.html" class="nav__link">Дополнительное образование</a>
+        <a href="teachers.html" class="nav__link">Наша команда</a>
+        <div class="nav__item nav__item--has-sub">
+          <a href="index.html#admission" class="nav__link">Поступление</a>
+          <div class="nav__dropdown">
+            <a href="index.html#admission" class="nav__dropdown-link">Как поступить</a>
+            <a href="#" class="nav__dropdown-link">Документы</a>
+          </div>
+        </div>
+        <a href="index.html#life" class="nav__link">Жизнь школы</a>
+      </nav>
+      <div class="header__actions">
+        <a href="index.html#admission" class="btn btn--primary btn--sm">Записаться</a>
+        <button class="burger" id="burger" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero page-hero--ee">
+    <div class="page-hero--ee__bg" style="background-image: url('extra-edu/hero.jpg')"></div>
+    <div class="container">
+      <p class="section__eyebrow">За рамками уроков</p>
+      <h1 class="page-hero__title">Дополнительное образование</h1>
+      <p class="page-hero__desc">
+        В мире есть столько всего интересного, увлекательного, прекрасного и загадочного,
+        что просто невозможно уместить в рамках школьной программы.
+        Поэтому мы предлагаем ученикам расширять образовательные горизонты
+        и найти кружок, который будет им по-настоящему интересен.
+      </p>
+    </div>
+  </section>
+
+  <section class="section ee-intro">
+    <div class="container">
+      <div class="ee-intro__grid">
+        <div class="ee-intro__main">
+          <p class="section__eyebrow">Программа</p>
+          <p class="ee-intro__text">
+            Курсы продолжают логику образовательной модели школы: помогают стать
+            <strong>автономным учеником</strong> — человеком, который делает свой выбор
+            при поддержке родителей и школы, управляет обучением и отвечает за решения.
+          </p>
+          <p class="ee-intro__meta">
+            Координатор академического направления —
+            <strong>Рыбакова Екатерина Вадимовна</strong>
+          </p>
+        </div>
+        <div class="ee-intro__aside">
+          <a href="#science" class="ee-pill">Наука и инженерия</a>
+          <a href="#culture" class="ee-pill">Культура и история</a>
+          <a href="#creative" class="ee-pill">Творчество и медиа</a>
+          <a href="#sport" class="ee-pill">Спорт и движение</a>
+          <a href="#english" class="ee-pill">На английском языке</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ee-catalog" id="science">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__eyebrow">Направление</p>
+        <h2 class="section__title">Наука, математика, инженерия</h2>
+      </div>
+      <div class="ee-grid">
+        <article class="ee-card">
+          <div class="ee-card__media">
+            <img src="extra-edu/physics.jpg" alt="" loading="lazy">
+          </div>
+          <div class="ee-card__body">
+            <h3 class="ee-card__title">Экспериментальная физика. DIY physics</h3>
+            <p class="ee-card__subtitle">Физика без формул. Научный беспредел</p>
+            <p class="ee-card__teacher">Голубченко Н. В.</p>
+            <p class="ee-card__text">Каждое занятие — научный квест. Исследуем явления вокруг нас: гипотезы выдвигают и проверяют ученики на простейшем оборудовании из магазина, кухни и гаража.</p>
+            <p class="ee-card__motto">«Сомневайся, пробуй, наблюдай, объясняй!»</p>
+          </div>
+        </article>
+        <article class="ee-card">
+          <div class="ee-card__media">
+            <img src="extra-edu/space.jpg" alt="" loading="lazy">
+          </div>
+          <div class="ee-card__body">
+            <h3 class="ee-card__title">Звёздный штурман</h3>
+            <p class="ee-card__subtitle">Путешествие от Земли до края Вселенной</p>
+            <p class="ee-card__teacher">Голубченко Н. В.</p>
+            <p class="ee-card__text">Готовим экипаж и отправляемся в космос: планеты, звёзды, структура Вселенной и главный вопрос — одни ли мы во Вселенной?</p>
+          </div>
+        </article>
+        <article class="ee-card">
+          <div class="ee-card__media">
+            <img src="extra-edu/ecology.jpg" alt="" loading="lazy">
+          </div>
+          <div class="ee-card__body">
+            <h3 class="ee-card__title">Экология для жизни</h3>
+            <p class="ee-card__teacher">Кухарчик Е. Н.</p>
+            <p class="ee-card__text">Устойчивое развитие, атмосфера, озоновый слой, биоразнообразие. Экологическая лаборатория и маленькие шаги к устойчивому будущему.</p>
+          </div>
+        </article>
+        <article class="ee-card">
+          <div class="ee-card__media">
+            <img src="extra-edu/math.jpg" alt="" loading="lazy">
+          </div>
+          <div class="ee-card__body">
+            <h3 class="ee-card__title">Математический детектив</h3>
+            <p class="ee-card__teacher">Голубченко Н. В.</p>
+            <p class="ee-card__text">Нестандартные задачи и головоломки: логические парадоксы, принцип Дирихле, комбинаторика, софизмы. Каждое занятие — новое «дело» для критического мышления.</p>
+          </div>
+        </article>
+        <article class="ee-card">
+          <div class="ee-card__media">
+            <img src="extra-edu/geometry.jpg" alt="" loading="lazy">
+          </div>
+          <div class="ee-card__body">
+            <h3 class="ee-card__title">Геометрия вокруг нас</h3>
+            <p class="ee-card__subtitle">От искусства до архитектуры</p>
+            <p class="ee-card__teacher">Голубченко Н. В.</p>
+            <p class="ee-card__text">Симметрия, золотое сечение, оп-арт, перспектива. Практика с циркулем и ножницами: мандалы, фигуры Эшера, макеты куполов и мостов.</p>
+          </div>
+        </article>
+        <article class="ee-card">
+          <div class="ee-card__media">
+            <img src="extra-edu/eng.jpg" alt="" loading="lazy">
+          </div>
+          <div class="ee-card__body">
+            <h3 class="ee-card__title">Инженерная лига</h3>
+            <p class="ee-card__subtitle">От чертежа до испытательного полигона</p>
+            <p class="ee-card__teacher">Голубченко Н. В.</p>
+            <p class="ee-card__text">Полный цикл: идея → расчёты → прототип → испытания. Команды-«КБ» соревнуются за самую надёжную, зрелищную и инновационную конструкцию.</p>
+          </div>
+        </article>
+        <article class="ee-card">
+          <div class="ee-card__media">
+            <img src="extra-edu/finance.jpg" alt="" loading="lazy">
+          </div>
+          <div class="ee-card__body">
+            <h3 class="ee-card__title">Финансовая грамотность и математика</h3>
+            <p class="ee-card__subtitle">Практическая математика</p>
+            <p class="ee-card__teacher">Голубченко Н. В.</p>
+            <p class="ee-card__text">Проценты, бюджет, графики, тарифы. Работа с реальными квитанциями и деловые игры: семейный бюджет и мини-стартап.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ee-catalog ee-catalog--alt" id="culture">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__eyebrow">Направление</p>
+        <h2 class="section__title">Культура, история, география</h2>
+      </div>
+      <div class="ee-grid">
+        <article class="ee-card">
+          <div class="ee-card__media">
+            <img src="extra-edu/museum.jpg" alt="" loading="lazy">
+          </div>
+          <div class="ee-card__body">
+            <h3 class="ee-card__title">Стань частью культурного круга</h3>
+            <p class="ee-card__teacher">Рыбакова Е. В.</p>
+            <p class="ee-card__text">Ребята становятся гидами-экскурсоводами: готовят и проводят экскурсии по музеям города. Финал — выезд в пригороды, Старую Ладогу или Карелию.</p>
+          </div>
+        </article>
+        <article class="ee-card">
+          <div class="ee-card__media">
+            <img src="extra-edu/map.jpg" alt="" loading="lazy">
+          </div>
+          <div class="ee-card__body">
+            <h3 class="ee-card__title">Взломай код цивилизаций!</h3>
+            <p class="ee-card__teacher">Рыбакова Е. В.</p>
+            <p class="ee-card__text">Как ландшафт и климат рождали города и культуры. География как расследование: горы, рис, климат и правила игры цивилизаций.</p>
+          </div>
+        </article>
+        <article class="ee-card">
+          <div class="ee-card__media">
+            <img src="extra-edu/mystery.jpg" alt="" loading="lazy">
+          </div>
+          <div class="ee-card__body">
+            <h3 class="ee-card__title">Код да Винчи</h3>
+            <p class="ee-card__subtitle">Русский / английский</p>
+            <p class="ee-card__teacher">Рыбакова Е. В.</p>
+            <p class="ee-card__text">Тайны истории: руны, календарь майя, Стоунхендж, Тадж-Махал, Атлантида. Беседы-квесты в дополнение к курсу истории.</p>
+          </div>
+        </article>
+        <article class="ee-card">
+          <div class="ee-card__media">
+            <img src="extra-edu/books.jpg" alt="" loading="lazy">
+          </div>
+          <div class="ee-card__body">
+            <h3 class="ee-card__title">Читай! / Читай в оригинале!</h3>
+            <p class="ee-card__subtitle">Русский / английский</p>
+            <p class="ee-card__teacher">Колесник Ю. В.</p>
+            <p class="ee-card__text">Книжный клуб: Нил Гейман, Теа Бэкман, Р. Дж. Паласио, Крис Колфер. Читаем, обсуждаем, смотрим экранизации.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ee-catalog" id="creative">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__eyebrow">Направление</p>
+        <h2 class="section__title">Творчество, дизайн, медиа</h2>
+      </div>
+      <div class="ee-grid">
+        <article class="ee-card">
+          <div class="ee-card__media">
+            <img src="extra-edu/design.jpg" alt="" loading="lazy">
+          </div>
+          <div class="ee-card__body">
+            <h3 class="ee-card__title">Цифровой дизайн</h3>
+            <p class="ee-card__teacher">Михеев Д. Ю.</p>
+            <p class="ee-card__text">На курсе цифрового дизайна ребята изучат полный дизайнерский цикл создания проектов от формулировки замысла до его технического воплощения.</p>
+          </div>
+        </article>
+        <article class="ee-card">
+          <div class="ee-card__media">
+            <img src="extra-edu/film.jpg" alt="" loading="lazy">
+          </div>
+          <div class="ee-card__body">
+            <h3 class="ee-card__title">Свет! Камера! Мотор!</h3>
+            <p class="ee-card__teacher">Мангасарова С. В.</p>
+            <p class="ee-card__text">Сценарий, режиссура, камера, монтаж и звук. Ученики создают собственные короткометражки с напряжением до последнего кадра.</p>
+          </div>
+        </article>
+        <article class="ee-card">
+          <div class="ee-card__media">
+            <img src="extra-edu/art.jpg" alt="" loading="lazy">
+          </div>
+          <div class="ee-card__body">
+            <h3 class="ee-card__title">Искусство: от кисти до музея</h3>
+            <p class="ee-card__text">Главное — не бояться творить. Кисть, краски, эксперимент, свободное выражение и понимание произведений искусства.</p>
+          </div>
+        </article>
+        <article class="ee-card">
+          <div class="ee-card__media">
+            <img src="extra-edu/theatre.jpg" alt="" loading="lazy">
+          </div>
+          <div class="ee-card__body">
+            <h3 class="ee-card__title">Весь мир — театр</h3>
+            <p class="ee-card__text">Сцена, роли, сценическая речь, память и эмоциональный интеллект. Для тех, кто любит играть, и для тех, кто хочет победить стеснительность.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ee-catalog ee-catalog--alt" id="sport">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__eyebrow">Направление</p>
+        <h2 class="section__title">Спорт и движение</h2>
+      </div>
+      <div class="ee-grid">
+        <article class="ee-card">
+          <div class="ee-card__media">
+            <img src="extra-edu/sport.jpg" alt="" loading="lazy">
+          </div>
+          <div class="ee-card__body">
+            <h3 class="ee-card__title">Командные игры</h3>
+            <p class="ee-card__subtitle">Футбол, баскетбол, флорбол</p>
+            <p class="ee-card__teacher">Эндрю и Анна Сергеевна</p>
+            <p class="ee-card__text">Драйв командной игры, ритм, взаимодействие и спортивный характер.</p>
+          </div>
+        </article>
+        <article class="ee-card">
+          <div class="ee-card__media">
+            <img src="extra-edu/dance.jpg" alt="" loading="lazy">
+          </div>
+          <div class="ee-card__body">
+            <h3 class="ee-card__title">Фламенко</h3>
+            <p class="ee-card__teacher">Кепша О. В.</p>
+            <p class="ee-card__text">Ритм, танец и краски фламенко — энергия, пластика и выразительность.</p>
+          </div>
+        </article>
+        <article class="ee-card">
+          <div class="ee-card__media">
+            <img src="extra-edu/yoga.jpg" alt="" loading="lazy">
+          </div>
+          <div class="ee-card__body">
+            <h3 class="ee-card__title">Йога</h3>
+            <p class="ee-card__text">Гармония, баланс, рефлексия и сила духа.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ee-catalog" id="english">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__eyebrow">Направление</p>
+        <h2 class="section__title">Курсы на английском языке</h2>
+      </div>
+      <div class="ee-grid">
+        <article class="ee-card">
+          <div class="ee-card__media">
+            <img src="extra-edu/history.jpg" alt="" loading="lazy">
+          </div>
+          <div class="ee-card__body">
+            <h3 class="ee-card__title">World History</h3>
+            <p class="ee-card__teacher">Рыбакова Е. В.</p>
+            <p class="ee-card__text">Мировая история на английском: коммуникация, анализ и критическое мышление. Древность и Средневековье глубже школьной программы.</p>
+          </div>
+        </article>
+        <article class="ee-card">
+          <div class="ee-card__media">
+            <img src="extra-edu/science.jpg" alt="" loading="lazy">
+          </div>
+          <div class="ee-card__body">
+            <h3 class="ee-card__title">Science</h3>
+            <p class="ee-card__teacher">Голубченко Н. В.</p>
+            <p class="ee-card__text">Стык физики, химии и биологии. Научный эксперимент, исследование и анализ данных — на английском языке.</p>
+          </div>
+        </article>
+        <article class="ee-card">
+          <div class="ee-card__media">
+            <img src="extra-edu/math.jpg" alt="" loading="lazy">
+          </div>
+          <div class="ee-card__body">
+            <h3 class="ee-card__title">Mathematics</h3>
+            <p class="ee-card__teacher">Голубченко Н. В.</p>
+            <p class="ee-card__text">Математические понятия и язык одновременно: не «перевод» с русского, а мышление на английском через математику.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section em-cta">
+    <div class="container">
+      <div class="em-cta__box">
+        <h2 class="em-cta__title">Хотите подобрать кружок?</h2>
+        <p class="em-cta__text">
+          Расскажем о расписании, формате занятий и поможем выбрать направление
+          под интересы ребёнка.
+        </p>
+        <a href="index.html#admission" class="btn btn--primary">Записаться на консультацию</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="logo logo--footer">
+          <span id="mark" class="logo__mark"></span>
+          <span class="logo__text">Interschool</span>
+        </a>
+        <p>Международные школы Санкт-Петербурга<br>с 1993 года</p>
+      </div>
+      <div class="footer__links">
+        <a href="index.html#about">О нас</a>
+        <a href="extra-education.html">Доп. образование</a>
+        <a href="teachers.html">Наша команда</a>
+        <a href="index.html#admission">Поступление</a>
+      </div>
+      <div class="footer__copy">
+        <p>© 2026 Interschool. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

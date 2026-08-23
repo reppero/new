@@ -99,6 +99,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 6000);
   }
 
+
+  // Extra-education cards reveal
+  const eeCards = document.querySelectorAll('.ee-card');
+  if (eeCards.length) {
+    const eeObs = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          eeObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });
+    eeCards.forEach((card, i) => {
+      card.style.transitionDelay = `${(i % 4) * 0.08}s`;
+      eeObs.observe(card);
+    });
+  }
+
   // Teachers pagination — 4 cards per page
   const PER_PAGE = 4;
 
