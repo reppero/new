@@ -12,48 +12,7 @@
 </head>
 <body>
   <!-- Header -->
-  <header class="header" id="header">
-    <div class="container header__inner">
-      <a href="#" class="logo">
-        <span id="mark" class="logo__mark"></span>
-        <span class="logo__text">Interschool</span>
-      </a>
-
-      <nav class="nav" id="nav">
-        <div class="nav__item nav__item--has-sub">
-          <a href="#about" class="nav__link">О нас</a>
-          <div class="nav__dropdown">
-            <a href="#about" class="nav__dropdown-link">МШГУ</a>
-            <a href="#about" class="nav__dropdown-link">СПбМШ</a>
-          </div>
-        </div>
-        <div class="nav__item nav__item--has-sub">
-          <a href="education-model.html" class="nav__link">Учебный процесс</a>
-          <div class="nav__dropdown">
-            <a href="education-model.html" class="nav__dropdown-link">Образовательная модель</a>
-            <a href="learning-formats.html" class="nav__dropdown-link">Формы обучения</a>
-          </div>
-        </div>
-        <a href="extra-education.html" class="nav__link">Дополнительное образование</a>
-        <a href="teachers.html" class="nav__link">Наша команда</a>
-        <div class="nav__item nav__item--has-sub">
-          <a href="#admission" class="nav__link">Поступление</a>
-          <div class="nav__dropdown">
-            <a href="#admission" class="nav__dropdown-link">Как поступить</a>
-            <a href="#" class="nav__dropdown-link">Документы</a>
-          </div>
-        </div>
-        <a href="#life" class="nav__link">Жизнь школы</a>
-</nav>
-
-      <div class="header__actions">
-        <a href="#admission" class="btn btn--primary btn--sm">Записаться</a>
-        <button class="burger" id="burger" aria-label="Меню">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </header>
+  <div id="site-header"></div>
 
 <!-- Hero -->
   <section class="hero">
@@ -80,7 +39,7 @@
 
       <div class="director__inner">
         <div class="director__photo">
-          <img src="Teachers photos/9.Administration/1.png" alt="Лилия Брониславовна Лаптева, директор школы">
+          <img src="Teachers photos/9.Administration/1.png" alt="Лилия Брониславовна Лаптева, директор школы" loading="lazy">
         </div>
         <div class="director__content">
           <blockquote class="director__quote">
@@ -183,7 +142,7 @@
       <!-- 1 -->
       <div class="adv-block">
         <div class="adv-block__bg">
-          <img src="advantages/1-heritage.jpg" alt="Книги и знания — традиции образования">
+          <img src="advantages/1-heritage.jpg" alt="Книги и знания — традиции образования" loading="lazy">
         </div>
         <div class="adv-block__card">
           <p class="adv-block__text">«Образовательная деятельность с 1993 года — более тридцати лет опыта, традиций и постоянного развития.»</p>
@@ -197,7 +156,7 @@
       <!-- 2 -->
       <div class="adv-block adv-block--flip">
         <div class="adv-block__bg">
-          <img src="advantages/2-official.jpg" alt="Официальные документы и статус">
+          <img src="advantages/2-official.jpg" alt="Официальные документы и статус" loading="lazy">
         </div>
         <div class="adv-block__card">
           <p class="adv-block__text">«Официальная лицензия и аккредитация — гарантия качества и соответствия государственным требованиям.»</p>
@@ -211,7 +170,7 @@
       <!-- 3 -->
       <div class="adv-block">
         <div class="adv-block__bg">
-          <img src="advantages/3-flexible.jpg" alt="Гибкие формы обучения">
+          <img src="advantages/3-flexible.jpg" alt="Гибкие формы обучения" loading="lazy">
         </div>
         <div class="adv-block__card">
           <p class="adv-block__text">«Мы предлагаем все формы обучения: очную, заочную, очно-заочную и семейную — чтобы каждая семья могла выбрать свой путь.»</p>
@@ -225,7 +184,7 @@
       <!-- 4 -->
       <div class="adv-block adv-block--flip">
         <div class="adv-block__bg">
-          <img src="advantages/4-life.jpg" alt="Живая школьная жизнь">
+          <img src="advantages/4-life.jpg" alt="Живая школьная жизнь" loading="lazy">
         </div>
         <div class="adv-block__card">
           <p class="adv-block__text">«Увлекательная и весёлая школьная жизнь: праздники, конкурсы, спорт, творчество и настоящая дружба.»</p>
@@ -282,10 +241,18 @@
             <div class="form__row">
               <select name="school" required>
                 <option value="" disabled selected>Выберите школу</option>
-                <option value="spbms">СПбМШ</option>
-                <option value="mshu">МШГУ</option>
+                <option value="mshu-6-11">МШГУ · 6–11 · Восстания, 8Б</option>
+                <option value="mshu-1-5">МШГУ · 1–5 · Б. Морская, 23</option>
+                <option value="spbms">СПбМШ · 1–11 · Чекистов, 13</option>
               </select>
-              <button type="submit" class="btn btn--primary">Записаться на экскурсию</button>
+              <select name="request" required>
+                <option value="" disabled selected>Цель обращения</option>
+                <option value="tour">Экскурсия</option>
+                <option value="interview">Собеседование</option>
+              </select>
+            </div>
+            <div class="form__row form__row--submit">
+              <button type="submit" class="btn btn--primary" id="lead-submit">Оставить заявку</button>
             </div>
           </form>
         </div>
@@ -332,26 +299,9 @@
 
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <a href="#" class="logo logo--footer">
-		  <span id="mark" class="logo__mark"></span>
-          <span class="logo__text">Interschool</span>
-        </a>
-        <p>Международные школы Санкт-Петербурга<br>с 1993 года</p>
-      </div>
-      <div class="footer__links">
-        <a href="#about">О нас</a>
-        <a href="#advantages">Преимущества</a>
-        <a href="#admission">Поступление</a>
-      </div>
-      <div class="footer__copy">
-        <p>© 2026 Interschool. Все права защищены.</p>
-      </div>
-    </div>
-  </footer>
+  <div id="site-footer"></div>
 
+  <script src="includes.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

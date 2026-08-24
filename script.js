@@ -37,6 +37,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+
+  // Lead form: button label by request type
+  const leadForm = document.getElementById('lead-form');
+  const leadSubmit = document.getElementById('lead-submit');
+  const requestSelect = leadForm?.querySelector('select[name="request"]');
+  const updateLeadBtn = () => {
+    if (!leadSubmit || !requestSelect) return;
+    const v = requestSelect.value;
+    if (v === 'tour') leadSubmit.textContent = 'Записаться на экскурсию';
+    else if (v === 'interview') leadSubmit.textContent = 'Записаться на собеседование';
+    else leadSubmit.textContent = 'Оставить заявку';
+  };
+  requestSelect?.addEventListener('change', updateLeadBtn);
+
   // Simple form handler (demo)
   const form = document.getElementById('lead-form');
   if (form) {
@@ -114,6 +128,90 @@ document.addEventListener('DOMContentLoaded', () => {
     eeCards.forEach((card, i) => {
       card.style.transitionDelay = `${(i % 4) * 0.08}s`;
       eeObs.observe(card);
+    });
+  }
+
+
+  // Admission page reveals
+  const admEls = document.querySelectorAll('.adm-step, .adm-campus');
+  if (admEls.length) {
+    const admObs = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          admObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -24px 0px' });
+    admEls.forEach((el, i) => {
+      el.style.transitionDelay = `${(i % 3) * 0.1}s`;
+      admObs.observe(el);
+    });
+  }
+
+
+  // Lead modal
+  const leadModal = document.getElementById('lead-modal');
+  const openLeadModal = (request) => {
+    if (!leadModal) return;
+    const sel = leadModal.querySelector('select[name="request"]');
+    const btn = document.getElementById('lead-submit-modal');
+    if (sel && request) {
+      sel.value = request;
+      sel.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+    if (btn) {
+      if (request === 'tour') btn.textContent = 'Записаться на экскурсию';
+      else if (request === 'interview') btn.textContent = 'Записаться на собеседование';
+      else btn.textContent = 'Оставить заявку';
+    }
+    leadModal.classList.add('is-open');
+    leadModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('lead-modal-open');
+  };
+  const closeLeadModal = () => {
+    if (!leadModal) return;
+    leadModal.classList.remove('is-open');
+    leadModal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('lead-modal-open');
+  };
+  document.querySelectorAll('.js-open-lead').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      openLeadModal(el.dataset.request || '');
+    });
+  });
+  leadModal?.querySelectorAll('[data-close-lead]').forEach((el) => {
+    el.addEventListener('click', closeLeadModal);
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLeadModal();
+  });
+  const modalForm = document.getElementById('lead-form-modal');
+  const modalRequest = modalForm?.querySelector('select[name="request"]');
+  modalRequest?.addEventListener('change', () => {
+    const btn = document.getElementById('lead-submit-modal');
+    if (!btn) return;
+    const v = modalRequest.value;
+    if (v === 'tour') btn.textContent = 'Записаться на экскурсию';
+    else if (v === 'interview') btn.textContent = 'Записаться на собеседование';
+    else btn.textContent = 'Оставить заявку';
+  });
+  if (modalForm) {
+    modalForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('lead-submit-modal');
+      const original = btn.textContent;
+      btn.textContent = 'Отправлено ✓';
+      btn.disabled = true;
+      btn.style.background = 'var(--color-success)';
+      setTimeout(() => {
+        btn.textContent = original;
+        btn.disabled = false;
+        btn.style.background = '';
+        modalForm.reset();
+        closeLeadModal();
+      }, 2000);
     });
   }
 
