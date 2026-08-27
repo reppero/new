@@ -37,6 +37,19 @@
           <div class="nav__dropdown">
             <a href="ABOUT" class="nav__dropdown-link">МШГУ</a>
             <a href="ABOUT" class="nav__dropdown-link">СПбМШ</a>
+            <a href="LIFE" class="nav__dropdown-link">Жизнь школы</a>
+          </div>
+        </div>
+        <div class="nav__item nav__item--has-sub">
+          <a href="#" class="nav__link">Сведения</a>
+          <div class="nav__dropdown">
+            <a href="#" class="nav__dropdown-link">Основные сведения</a>
+            <a href="#" class="nav__dropdown-link">Структура и органы управления</a>
+            <a href="#" class="nav__dropdown-link">Образование</a>
+            <a href="#" class="nav__dropdown-link">Образовательные стандарты</a>
+            <a href="#" class="nav__dropdown-link">Материально-техническое обеспечение. Доступная среда</a>
+            <a href="#" class="nav__dropdown-link">Меры поддержки обучающихся</a>
+            <a href="#" class="nav__dropdown-link">Международное сотрудничество</a>
           </div>
         </div>
         <div class="nav__item nav__item--has-sub">
@@ -55,7 +68,6 @@
             <a href="#" class="nav__dropdown-link">Документы</a>
           </div>
         </div>
-        <a href="LIFE" class="nav__link">Жизнь школы</a>
       </nav>
       <div class="header__actions">
         <a href="ADMISSION" class="btn btn--primary btn--sm">Записаться</a>
